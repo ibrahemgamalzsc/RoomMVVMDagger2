@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="addNewUserViewModel"
+    type="com.example.roommvvmdagger.ui.viewmodel.AddNewUserViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.view.AddNewActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Username"
+            android:text="@={addNewUserViewModel.username}"
+            android:textSize="20dp"></EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Email"
+            android:text="@={addNewUserViewModel.email}"
+            android:textSize="20dp"></EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Password"
+            android:text="@={addNewUserViewModel.password}"
+            android:textSize="20dp"></EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Add"
+            android:onClick="@{(v)->addNewUserViewModel.onAddClick()}"
+            android:textAllCaps="false"
+            android:textSize="20dp"></Button>
+    </LinearLayout>
+</layout>
